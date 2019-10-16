@@ -1,0 +1,151 @@
+html {
+  font-size: 16px;
+  font-family: arial;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  width: calc(1px * var(--largeur));
+  height: calc(1px * var(--hauteur));
+  position: relative;
+}
+
+#app {
+  height: 100%;
+  width: 100%;
+  background-color: lightblue;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#app > * {
+  position: absolute;
+}
+
+#app {
+  background-color: lightblue;
+}
+
+#app.rougit {
+  -webkit-animation-name: app-rougit;
+          animation-name: app-rougit;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 5;
+          animation-iteration-count: 5;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+@-webkit-keyframes app-rougit {
+  0% {
+  }
+  100% {
+    background-color: red;
+  }
+}
+
+@keyframes app-rougit {
+  0% {
+  }
+  100% {
+    background-color: red;
+  }
+}
+
+.filante {
+  animation-name: filante;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+.filanteFin {
+  top: 25px;
+  left: 60px;
+  background-image: url(/images/etoile1.svg);
+  width: 67px;
+  height: 57px;
+
+}
+
+@keyframes filante {
+  0% {
+    left: -100px;
+  }
+
+  100% {
+    left: 60px;
+    z-index: 1;
+    top: 33px;
+  }
+}
+.filantedeux {
+  animation-name: filantedeux;
+  animation-duration: 2s;
+}
+
+@keyframes filantedeux {
+  0% {
+    left: -150px;
+    
+  }
+
+  100% {
+    z-index: 1;
+    top: 44px;
+    left: 75px;
+    
+  }
+}
+
+.texte {
+  animation-name: texteApparait;
+  animation-duration: 2s;
+}
+@keyframes texteApparait {
+  0% {
+    opacity: 0;
+    
+  }
+
+  100% {
+    opacity: 1;
+    
+  }
+}
+
+.bouger {
+  animation:  bouge 2s linear 2 alternate;
+}
+
+@keyframes bouge {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  
+  50% {
+    transform: translate(15px, 0);
+  }
+  
+  80% {
+    transform: translate(-15px, 0);
+  }
+}
+/*# sourceMappingURL=style.css.map */
